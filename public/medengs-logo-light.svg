@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 400" width="1700" height="400">
+  <defs>
+    <!--
+      MEDENGS logo — transparent background, two-tone teal split.
+      Left (M, E, D):       #4DB8B8  — lighter teal
+      Right (E, N, G, S):   #00E5CC  — bright cyan-teal
+      Split lands between D and E (around 34% of total text width)
+    -->
+    <!-- Split between D and E: D ends ~43% through the text -->
+    <linearGradient id="medengsSplit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#4DB8B8"/>
+      <stop offset="0.43" stop-color="#4DB8B8"/>
+      <stop offset="0.44" stop-color="#00E5CC"/>
+      <stop offset="1"   stop-color="#00E5CC"/>
+    </linearGradient>
+    <style>
+      .medengs-text {
+        font-family: "Arial Black", "Arial Bold", "Helvetica Neue", sans-serif;
+        font-weight: 900;
+        font-size: 228px;
+        letter-spacing: -10px;
+        fill: url(#medengsSplit);
+      }
+    </style>
+  </defs>
+
+  <!-- Transparent background -->
+  <rect width="1700" height="400" fill="none"/>
+
+  <!--
+    MEDENGS centered in viewBox
+    Approx text width: 7 chars × ~200px ≈ 1400px
+    Start x ≈ 150 to center in 1700px viewBox
+    y=290 ≈ baseline for visual centering
+  -->
+  <text class="medengs-text" x="150" y="292"
+        text-anchor="start" dominant-baseline="auto">
+    MEDENGS
+  </text>
+</svg>
